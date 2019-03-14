@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D2DAEBE-0995-4D5F-98BD-9324AF9C095D}</ProjectGuid>
+    <ProjectGuid>{FD8ECA24-45FA-4994-8910-105197027B60}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>NServiceBusSagaService</RootNamespace>
-    <AssemblyName>NServiceBusSagaService</AssemblyName>
+    <RootNamespace>ClientConsole</RootNamespace>
+    <AssemblyName>ClientConsole</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -61,14 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MySaga.cs" />
-    <Compile Include="MySagaData.cs" />
-    <Compile Include="MyTimer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyRequestMessageHandler.cs" />
-    <Compile Include="Step1Command.cs" />
-    <Compile Include="Step2Command.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D2DAEBE-0995-4D5F-98BD-9324AF9C095D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>NServiceBusSagaService</RootNamespace>
-    <AssemblyName>NServiceBusSagaService</AssemblyName>
+    <ProjectGuid>{14E828DC-783D-4C52-975E-5EA5BB2B56B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NServiceBusSaga.Shared</RootNamespace>
+    <AssemblyName>NServiceBusSaga.Shared</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -61,24 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MySaga.cs" />
-    <Compile Include="MySagaData.cs" />
-    <Compile Include="MyTimer.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BusConfigurator.cs" />
+    <Compile Include="EndpointConstants.cs" />
+    <Compile Include="MyRequestMessage.cs" />
+    <Compile Include="MyResponseMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MyRequestMessageHandler.cs" />
-    <Compile Include="Step1Command.cs" />
-    <Compile Include="Step2Command.cs" />
+    <Compile Include="MySagaResponse.cs" />
+    <Compile Include="MyStartSagaCommand.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NServiceBusSaga.Shared\NServiceBusSaga.Shared.csproj">
-      <Project>{14e828dc-783d-4c52-975e-5ea5bb2b56b2}</Project>
-      <Name>NServiceBusSaga.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\NServiceBus.7.1.6\analyzers\dotnet\cs\NServiceBus.Core.Analyzer.dll" />
